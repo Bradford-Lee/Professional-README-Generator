@@ -35,7 +35,7 @@ function startPrompt() {
         {
             type: 'input',
             name: 'license',
-            message: 'Provide the License if any:'
+            message: 'Pick a license from the list (MIT, GPL, Apache):'
         },
         {
             type: 'input',
@@ -49,8 +49,13 @@ function startPrompt() {
         },
         {
             type: 'input',
-            name: 'questions',
-            message: 'List any questions:'
+            name: 'github',
+            message: 'Please enter your GitHub username:'
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'Please enter your Email:'
         }
 ]).then((data) => {
 const readme = generateMarkdown(data)
