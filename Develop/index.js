@@ -1,9 +1,9 @@
-// TODO: Include packages needed for this application
+// Include packages needed for this application
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
 const fs = require('fs');
 
-// TODO: Create an array of questions for user input
+// Create an array of questions for user input
 function startPrompt() {
     
     inquirer.prompt([ 
@@ -19,18 +19,13 @@ function startPrompt() {
         },
         {
             type: 'input',
-            name: 'tableOfContents',
-            message: 'List the Table of Contents:'
-        },
-        {
-            type: 'input',
             name: 'installation',
             message: 'Describe the steps for the installation:'
         },
         {
             type: 'input',
             name: 'usage',
-            message: 'Provide instructions and examples for usage:'
+            message: 'Provide instructions and examples for use:'
         },
         {
             type: 'input',
@@ -40,7 +35,7 @@ function startPrompt() {
         {
             type: 'input',
             name: 'contributing',
-            message: 'List any Contributers:'
+            message: 'List any collaborators or contributors:'
         },
         {
             type: 'input',
@@ -67,30 +62,24 @@ if (!readme) {
     process.exit()
 } 
 writeToFile(readme)
-    // const outputText = `Title: ${data.title}\nDescription: ${data.description}\nTable of Contents: ${data.tableOfContents}\n Installation: ${data.installation}\nUsage: ${data.usage}\nLicense: ${data.license}\nContributing: ${data.contributing}\nTests: ${data.test}\nQuestions: ${data.questions}`;
     }).catch((err) => console.log(err))
 };
 
-
-// TODO: Create a function to write README file
+// Create a function to write README file
 function writeToFile(readme) {
-    // TODO add fs code here to save file
+    // add fs code here to save file
     fs.writeFile("README.md", readme, (error) => {
         if (error) {
             console.log(error);
         } else {
             console.log("Success!");
         }
-})
+    })
 };
 
-// TODO: Create a function to initialize app
+// Create a function to initialize app
 function init() {
     startPrompt()
-    // inquirer.createPromptModule(questions).then(function(answers){
-    //         const markdownText = generateMarkdown(answers);
-    //         writeToFile('whatevs', markdownText);
-    // });
 }
 
 // Function call to initialize app
