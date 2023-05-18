@@ -3,7 +3,7 @@
 function renderLicenseBadge(license) {
   let result = "No License Badge"
   if (license === 'MIT' || license === 'GPL' || license === 'Apache')  {
-    result = `![License Badge](https://img.shields.io/badge/-${license}-red)`;
+    result = `![License Badge](https://img.shields.io/license/badge/-${license}-red)`;
   }
   console.log (license)
   return result
@@ -21,21 +21,29 @@ function renderLicenseSection(license) {}
 function generateMarkdown(data) {
   return `
   ${renderLicenseBadge(data.license)}
-  # Title: ${data.title}\n
+  # ${data.title}\n
   ## Description: 
   ${data.description}\n
   ## Table of Contents: 
+  1. [Description](##Description)
+  2. [Video](## Video)
+  3. [Installation](##Installation)
+  4. [Usage](##Usage)
+  5. [Contributing](##Contributing)
+  6. [Tests](##Tests)
+  7. [License](##License)
+  8. [Questions](##Questions)\n
   ${data.tableOfContents}\n
   ## Installation: 
   ${data.installation}\n
   ## Usage: 
   ${data.usage}\n
-  ## License: 
-  This License is covered covered under the ${data.license} License\n
   ## Contributing: 
   ${data.contributing}\n
   ## Tests: 
   ${data.tests}\n
+  ## License: 
+  This License is covered covered under the ${data.license} License\n
   ## Questions:
   GitHub Link:(https://github.com/${data.github})
   If you have any questions please reach out via Email @ ${data.email}
