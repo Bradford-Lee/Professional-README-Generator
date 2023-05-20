@@ -5,7 +5,6 @@ const fs = require('fs');
 
 // Create an array of questions for user input
 function startPrompt() {
-    
     inquirer.prompt([ 
         {
             type: 'input',
@@ -52,16 +51,16 @@ function startPrompt() {
             name: 'email',
             message: 'Please enter your Email:'
         }
-]).then((data) => {
-const readme = generateMarkdown(data)
-console.log(readme)
-console.log(data)
-if (!readme) {
-    console.error("Error generating markdown")
-    process.exitCode = 1
-    process.exit()
-} 
-writeToFile(readme)
+    ]).then((data) => {
+        const readme = generateMarkdown(data)
+        console.log(readme)
+        console.log(data)
+        if (!readme) {
+            console.error("Error generating markdown")
+            process.exitCode = 1
+            process.exit()
+        }        
+    writeToFile(readme)
     }).catch((err) => console.log(err))
 };
 
