@@ -6,8 +6,9 @@
 
 This node.js application quicklu creates a Professionaly README Generator for any user for their new project. This challenge allows us to get familiar with node.js, the terminal, and javascript. 
 
-[Professional README Generator.webm](https://github.com/Bradford-Lee/Professional-README-Generator/assets/127280322/3246ed63-452d-4790-aec1-2bbe0a37e2ab)
+Below is a walkthrough video that demonstrates how the user invokes the application from the command line and how the user would enter responses to all the prompts in the application.
 
+[Professional README Generator.webm](https://github.com/Bradford-Lee/Professional-README-Generator/assets/127280322/3246ed63-452d-4790-aec1-2bbe0a37e2ab)
 
 ## Installation
 
