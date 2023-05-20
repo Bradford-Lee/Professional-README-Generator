@@ -4,7 +4,7 @@
 
 ## Description
 
-This node.js application quickly creates a Professionaly README Generator for any user for their new project. This challenge allows us to get familiar with node.js, the terminal, and javascript. 
+This node.js application quickly creates a Professionaly README Generator for any user for their new project.
 
 Below is a walkthrough video that demonstrates how the user invokes the application from the command line and how the user would enter responses to all the prompts in the application.
 
